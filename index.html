@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beer Selling Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sale">Sale & Offers</a></li>
+                <li><a href="#buy">Buy Products</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#features">Featured Products</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="home-section">
+        <h1>WELCOME TO OUR BEER STORE</h1>
+        <p>Your one-stop shop for the finest beers.</p>
+    </section>
+
+    <section id="sale" class="sale-section">
+        <h2>Sale & Offers</h2>
+        <div class="sale-images">
+            <img src="images\offer1 img.jpg" alt="Sale Beer 1">
+            <img src="images\offer 3 img.jpeg" alt="Sale Beer 2">
+            
+            
+        </div>
+    </section>
+
+    <section id="buy">
+        <h2>Buy Products</h2>
+        <p>Browse our wide selection of beers.</p>
+        <div class="product-images">
+            <img src="images\pro 1img.avif" alt="Product Beer 1">
+            <img src="images\pro2 img.avif" alt="Product Beer 2">
+            <img src="images/pro 5 img.avif" alt="Product Beer 3">
+            <img src="images/pro 4 img.avif" alt="Product Beer 3">
+            <img src="images/pro 3 img.avif" alt="Product Beer 3">
+            <img src="images/pro 6 img.avif" alt="Product Beer 3">
+        </div>
+    </section>
+
+    <section id="blog">
+        <h2>Blog</h2>
+        <p>Read our latest articles about beer.</p>
+        <div class="blog-images">
+            <img src="images/blog 1 img.jpg" alt="Blog 1">
+            <img src="images/blog img.jpeg" alt="Blog 2">
+        </div>
+        <p class="blog-description">
+            Welcome to our blog! Here, we share insights, tips, and stories about our latest products and the brewing process. Stay tuned for updates and feel free to explore our posts to learn more about the world of beer.
+        </p>
+    </section>
+
+    <section id="features">
+        <h2>Featured Products</h2>
+        <div class="featured-images">
+            <img src="images/feature 1 img.avif" alt="Featured Product 1">
+            <img src="images/feature imf 2.webp" alt="Featured Product 2">
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial-images">
+            <img src="images/test 1 img.avif" alt="Testimonial 1">
+            <img src="images/test 2 img.jpg" alt="Testimonial 2">
+        </div>
+        <div class="new-testimonial">
+            <h3>Join Our Happy Customers!</h3>
+            <p>
+                We value our customers' feedback and strive to provide the best experience possible. If you have enjoyed our products or services, we would love to hear from you! Share your experience with us and join our community of satisfied customers.
+            </p>
+            <p>
+                Your testimonials help us grow and improve, and they inspire others to try our offerings. Thank you for being a part of our journey!
+            </p>
+        </div>
+    </section>
+    <footer>
+        <p>All rights reserved &copy; 2024 Beer Store</p>
+    </footer>
+
+    <div id="login" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Sign In</button>
+            </form>
+            <p>Don't have an account? <a href="#signup">Sign Up</a></p>
+        </div>
+    </div>
+
+    <div id="signup" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sign Up</h2>
+            <form>
+                <label for="new-username">Username:</label>
+                <input type="text" id="new-username" name="new-username" required>
+                <label for="new-password">Password:</label>
+                <input type="password" id="new-password" name="new-password" required>
+                <button type="submit">Create Account</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Modal script for login and signup
+        var modal = document.getElementById("login");
+        var signupModal = document.getElementById("signup");
+        var span = document.getElementsByClassName("close");
+
+        document.querySelector('a[href="#login"]').onclick = function() {
+            modal.style.display = "block";
+        };
+
+        document.querySelector('a[href="#signup"]').onclick = function() {
+            signupModal.style.display = "block";
+        };
+
+        for (let i = 0; i < span.length; i++) {
+            span[i].onclick = function() {
+                modal.style.display = "none";
+                signupModal.style.display = "none";
+            };
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal || event.target == signupModal) {
+                modal.style.display = "none";
+                signupModal.style.display = "none";
+            }
+        };
+    </script>
